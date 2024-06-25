@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.pd-container {
+  padding: 2rem;
+  padding-top: 1rem;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 28rem));
+  grid-gap: 2rem;
+
+  .offer {
+    display: flex;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.6rem;
+    box-shadow: $box-shadow-light;
+    width: 100%;
+
+    .offer_info {
+      .name {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+      }
+
+      .lightTxt {
+        font-size: 1.3rem;
+        color: $neutral-400;
+        font-weight: 600;
+      }
+    }
+
+    img {
+      width: 5rem;
+      height: 6rem;
+      border-radius: 0.6rem;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+  }
+}
